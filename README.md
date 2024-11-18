@@ -30,9 +30,9 @@ Welcome to Pokemon sample app, presents list of pokemon and detail, built with M
 - modularised concept
 
 ## Features planned as backlog
-- **Pagination** to efficiently load and display cake list 
+- **Pagination** to efficiently load and display list 
 - **Offline caching** with a **single source of truth**
-- **Room DB** for local storage of cake listings
+- **Room DB** for local storage of listings
 - **work manager** for background caching
 - detailed testing and handling the low memory and restart scenarios 
 - no network and error screen with retry functionality

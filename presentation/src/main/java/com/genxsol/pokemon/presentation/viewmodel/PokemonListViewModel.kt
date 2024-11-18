@@ -7,7 +7,6 @@ import com.genxsol.pokemon.domain.model.Pokemons
 import com.genxsol.pokemon.domain.repository.PokemonRepository
 import com.genxsol.pokemon.presentation.base.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

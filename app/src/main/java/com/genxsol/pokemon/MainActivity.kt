@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Surface
+import com.genxsol.pokemon.presentation.navigation.AppNavigation
 import com.genxsol.pokemon.ui.theme.PokemonTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PokemonTheme {
                 Surface {
-                   // AppNavigation()
+                    AppNavigation()
                 }
             }
         }

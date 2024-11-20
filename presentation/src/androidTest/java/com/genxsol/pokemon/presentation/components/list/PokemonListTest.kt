@@ -2,7 +2,7 @@ package com.genxsol.pokemon.presentation.components.list
 
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
-import com.genxsol.pokemon.domain.model.Pokemon
+import com.genxsol.pokemon.presentation.screens.state.Pokemon
 import org.junit.Rule
 import org.junit.Test
 

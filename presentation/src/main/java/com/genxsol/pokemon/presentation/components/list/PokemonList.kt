@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.genxsol.pokemon.domain.model.Pokemon
+import com.genxsol.pokemon.presentation.screens.state.Pokemon
 
 @Composable
 fun PokemonList(pokemons: List<Pokemon>, onItemClick: (String) -> Unit = {}) {
@@ -42,9 +42,8 @@ fun PokemonListPreview() {
     PokemonList(
         pokemons = listOf(
             Pokemon("1", "Bulbasaur", "https://pokeapi.co/api/v2/pokemon/1/"),
-            Pokemon("2", "Bulbasaur", "https://pokeapi.co/api/v2/pokemon/1/"),
-            Pokemon("3", "Bulbasaur", "https://pokeapi.co/api/v2/pokemon/1/"),
+            Pokemon("2", "Bulbasaur", "https://pokeapi.co/api/v2/pokemon/2/"),
+            Pokemon("3", "Bulbasaur", "https://pokeapi.co/api/v2/pokemon/3/"),
         )
     )
-
 }

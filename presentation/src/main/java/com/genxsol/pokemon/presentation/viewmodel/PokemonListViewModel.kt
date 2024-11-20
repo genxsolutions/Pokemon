@@ -8,7 +8,6 @@ import com.genxsol.pokemon.domain.repository.PokemonRepository
 import com.genxsol.pokemon.presentation.base.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
@@ -20,7 +19,7 @@ class PokemonListViewModel @Inject constructor(
     private val dispatcher: DispatcherProvider
 ) : ViewModel() {
     private val _uiState = MutableStateFlow<UIState<Pokemons>>(UIState.Empty)
-    val uiState: StateFlow<UIState<Pokemons>> = _uiState.asStateFlow()
+    val uiState = _uiState.asStateFlow()
 
     init {
         fetchPokemonList()

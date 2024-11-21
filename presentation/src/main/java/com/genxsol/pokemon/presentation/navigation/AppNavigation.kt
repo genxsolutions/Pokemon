@@ -17,18 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.genxsol.pokemon.presentation.R
-import com.genxsol.pokemon.presentation.screens.PokemonDetailScreen
-import com.genxsol.pokemon.presentation.screens.PokemonListScreen
-import com.genxsol.pokemon.presentation.viewmodel.PokemonDetailViewModel
-import com.genxsol.pokemon.presentation.viewmodel.PokemonListViewModel
 
 @Composable
 fun AppNavigation() {
@@ -90,22 +83,9 @@ private fun MyNavHost(
         startDestination = Screen.MainScreen.route,
         modifier = modifier
     ) {
-        composable(Screen.MainScreen.route) {
-            val viewModel: PokemonListViewModel = hiltViewModel()
-            PokemonListScreen(viewModel.uiState.collectAsStateWithLifecycle()) { id ->
-                navController.navigate("detail/$id")
-            }
+        addListGraph {
+            navController.navigate("detail/$it")
         }
-        composable("${Screen.DetailsScreen.route}/{id}") { backStackEntry ->
-            val id = backStackEntry.arguments?.getString("id")
-                ?: throw IllegalArgumentException("Id is required")
-            val viewmodel: PokemonDetailViewModel = hiltViewModel()
-            PokemonDetailScreen(
-                pokemonId = id,
-                viewmodel.uiState.collectAsStateWithLifecycle()
-            ){
-                viewmodel.fetchPokemonDetail(it)
-            }
-        }
+        addDetailGraph()
     }
 }

@@ -23,6 +23,10 @@ rootProject.name = "pokemon"
 include(":app")
 include(":domain")
 include(":lib")
-include(":presentation")
+include(":list")
+project(":list").projectDir = file("features/list")
 include(":data")
 include(":common")
+include(":detail")
+project(":detail").projectDir = file("features/detail")
+

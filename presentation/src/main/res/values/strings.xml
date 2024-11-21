@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="nav_title">Pokemon</string>
-    <string name="nav_back_content_description">Back button</string>
-    <string name="detail_label_height">Height: %1$sm</string>">
-</resources>

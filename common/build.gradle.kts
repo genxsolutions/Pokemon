@@ -27,16 +27,31 @@ android {
             )
         }
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.14" //libs.findVersion("jetbrainsKotlinJvmVersion").get().requiredVersion
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    buildFeatures {
+        compose = true
+    }
     kotlinOptions {
         jvmTarget = "17"
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/gradle/*"
+        }
     }
 }
 
 dependencies {
+
+    implementation(libs.bundles.compose.bundle)
+    implementation(libs.androidx.material3.android)
 
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.compiler)

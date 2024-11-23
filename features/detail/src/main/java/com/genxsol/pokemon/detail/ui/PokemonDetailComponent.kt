@@ -24,7 +24,7 @@ import com.genxsol.pokemon.detail.R
 import com.genxsol.pokemon.domain.model.PokemonDetail
 
 @Composable
-fun PokemonDetailComponent(pokemon: PokemonDetail) {
+internal fun PokemonDetailComponent(pokemon: PokemonDetail) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -49,7 +49,7 @@ fun PokemonDetailComponent(pokemon: PokemonDetail) {
 }
 
 @Composable
-fun PokemonSpriteImage(imageUrl: String) {
+internal fun PokemonSpriteImage(imageUrl: String) {
     Card(
         shape = CircleShape,
         modifier = Modifier.size(150.dp)

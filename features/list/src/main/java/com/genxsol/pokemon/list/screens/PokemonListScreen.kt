@@ -14,7 +14,7 @@ import com.genxsol.pokemon.common.ui.LoadingIndicator
 import com.genxsol.pokemon.list.screens.state.toUiState
 
 @Composable
-fun PokemonListScreen(uiState: State<UIState<Pokemons>>, onItemClick: (String) -> Unit) {
+internal fun PokemonListScreen(uiState: State<UIState<Pokemons>>, onItemClick: (String) -> Unit) {
     when (val state = uiState.value) {
         is UIState.Loading -> LoadingIndicator()
         is UIState.Empty -> EmptyState()

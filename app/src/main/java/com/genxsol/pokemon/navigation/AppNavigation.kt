@@ -87,7 +87,7 @@ private fun MyNavHost(
         modifier = modifier
     ) {
         addListGraph {
-            navController.navigate("detail/$it")
+            navController.navigate("${Destination.Detail.route}/$it")
         }
         addDetailGraph()
     }

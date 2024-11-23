@@ -1,7 +1,6 @@
 # PokemonApp
 
-Welcome to Pokemon sample app, presents list of pokemon and detail, built with MVVM architecture and Jetpack Compose.
-
+Welcome to the Pokémon Sample App! This application showcases a list of Pokémon and their details, developed using the MVVM architecture and Jetpack Compose. Built within a limited timeframe of six hours, it focuses on demonstrating clean architecture principles. While functional, there is ample scope for further improvements.
 ## Major Highlights
 
 - **Jetpack Compose** for modern UI

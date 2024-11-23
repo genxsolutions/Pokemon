@@ -1,7 +1,6 @@
 package com.genxsol.pokemon.list.screens
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -15,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.genxsol.pokemon.list.screens.state.Pokemon
 
 @Composable
-fun PokemonList(pokemons: List<Pokemon>, onItemClick: (String) -> Unit = {}) {
+internal fun PokemonList(pokemons: List<Pokemon>, onItemClick: (String) -> Unit = {}) {
     LazyColumn {
         items(pokemons.size, key = { pokemons[it].id }) {
             PokemonItem(pokemon = pokemons[it], onItemClick = onItemClick)
@@ -24,7 +23,7 @@ fun PokemonList(pokemons: List<Pokemon>, onItemClick: (String) -> Unit = {}) {
 }
 
 @Composable
-fun PokemonItem(pokemon: Pokemon, onItemClick: (String) -> Unit = {}) {
+private fun PokemonItem(pokemon: Pokemon, onItemClick: (String) -> Unit = {}) {
     Card(modifier = Modifier.padding(8.dp),
         onClick = { onItemClick(pokemon.id) }
     ) {
